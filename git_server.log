@@ -1,0 +1,587 @@
+nohup: ignoring input
+[60498] Ready to rumble
+[60499] Connection from 127.0.0.1:46252
+fatal: protocol error: bad line length character: POST
+[60498] [60499] Disconnected (with error)
+[60504] Connection from 127.0.0.1:55714
+fatal: protocol error: bad line length character: POST
+[60498] [60504] Disconnected (with error)
+[60511] Connection from 127.0.0.1:55720
+fatal: protocol error: bad line length character: POST
+[60498] [60511] Disconnected (with error)
+[60512] Connection from 10.149.170.1:39200
+fatal: protocol error: bad line length character: HEAD
+[60498] [60512] Disconnected (with error)
+[60513] Connection from 10.149.170.1:39216
+fatal: protocol error: bad line length character: GET 
+[60498] [60513] Disconnected (with error)
+[60514] Connection from 127.0.0.1:55730
+fatal: protocol error: bad line length character: POST
+[60498] [60514] Disconnected (with error)
+[60515] Connection from 10.149.170.1:39232
+fatal: protocol error: bad line length character: GET 
+[60498] [60515] Disconnected (with error)
+[60516] Connection from 10.149.170.1:39236
+fatal: protocol error: bad line length character: GET 
+[60498] [60516] Disconnected (with error)
+[60517] Connection from 127.0.0.1:55732
+fatal: protocol error: bad line length character: POST
+[60498] [60517] Disconnected (with error)
+[60518] Connection from 127.0.0.1:55748
+fatal: protocol error: bad line length character: POST
+[60498] [60518] Disconnected (with error)
+[60519] Connection from 127.0.0.1:50832
+fatal: protocol error: bad line length character: POST
+[60498] [60519] Disconnected (with error)
+[60526] Connection from 127.0.0.1:50836
+fatal: protocol error: bad line length character: POST
+[60498] [60526] Disconnected (with error)
+[60527] Connection from 127.0.0.1:50850
+fatal: protocol error: bad line length character: POST
+[60498] [60527] Disconnected (with error)
+[60528] Connection from 127.0.0.1:50862
+fatal: protocol error: bad line length character: POST
+[60498] [60528] Disconnected (with error)
+[60529] Connection from 127.0.0.1:50874
+fatal: protocol error: bad line length character: POST
+[60498] [60529] Disconnected (with error)
+[60530] Connection from 127.0.0.1:48110
+fatal: protocol error: bad line length character: POST
+[60498] [60530] Disconnected (with error)
+[60537] Connection from 127.0.0.1:48112
+fatal: protocol error: bad line length character: POST
+[60498] [60537] Disconnected (with error)
+[60538] Connection from 127.0.0.1:48114
+fatal: protocol error: bad line length character: POST
+[60498] [60538] Disconnected (with error)
+[60539] Connection from 127.0.0.1:48126
+fatal: protocol error: bad line length character: POST
+[60498] [60539] Disconnected (with error)
+[60540] Connection from 127.0.0.1:48136
+fatal: protocol error: bad line length character: POST
+[60498] [60540] Disconnected (with error)
+[60541] Connection from 127.0.0.1:55660
+fatal: protocol error: bad line length character: POST
+[60498] [60541] Disconnected (with error)
+[60548] Connection from 127.0.0.1:55676
+fatal: protocol error: bad line length character: POST
+[60498] [60548] Disconnected (with error)
+[60549] Connection from 127.0.0.1:55686
+fatal: protocol error: bad line length character: POST
+[60498] [60549] Disconnected (with error)
+[60550] Connection from 127.0.0.1:55698
+fatal: protocol error: bad line length character: POST
+[60498] [60550] Disconnected (with error)
+[60551] Connection from 127.0.0.1:55710
+fatal: protocol error: bad line length character: POST
+[60498] [60551] Disconnected (with error)
+[60552] Connection from 127.0.0.1:46588
+fatal: protocol error: bad line length character: POST
+[60498] [60552] Disconnected (with error)
+[60559] Connection from 127.0.0.1:46594
+fatal: protocol error: bad line length character: POST
+[60498] [60559] Disconnected (with error)
+[60560] Connection from 127.0.0.1:46596
+fatal: protocol error: bad line length character: POST
+[60498] [60560] Disconnected (with error)
+[60561] Connection from 127.0.0.1:46610
+fatal: protocol error: bad line length character: POST
+[60498] [60561] Disconnected (with error)
+[60562] Connection from 127.0.0.1:46618
+fatal: protocol error: bad line length character: POST
+[60498] [60562] Disconnected (with error)
+[60563] Connection from 127.0.0.1:59966
+fatal: protocol error: bad line length character: POST
+[60498] [60563] Disconnected (with error)
+[60570] Connection from 127.0.0.1:59982
+fatal: protocol error: bad line length character: POST
+[60498] [60570] Disconnected (with error)
+[60571] Connection from 127.0.0.1:59988
+fatal: protocol error: bad line length character: POST
+[60498] [60571] Disconnected (with error)
+[60572] Connection from 127.0.0.1:60004
+fatal: protocol error: bad line length character: POST
+[60498] [60572] Disconnected (with error)
+[60573] Connection from 127.0.0.1:60008
+fatal: protocol error: bad line length character: POST
+[60498] [60573] Disconnected (with error)
+[60574] Connection from 127.0.0.1:42174
+fatal: protocol error: bad line length character: POST
+[60498] [60574] Disconnected (with error)
+[60581] Connection from 127.0.0.1:42190
+fatal: protocol error: bad line length character: POST
+[60498] [60581] Disconnected (with error)
+[60582] Connection from 127.0.0.1:42202
+fatal: protocol error: bad line length character: POST
+[60498] [60582] Disconnected (with error)
+[60583] Connection from 127.0.0.1:42208
+fatal: protocol error: bad line length character: POST
+[60498] [60583] Disconnected (with error)
+[60584] Connection from 127.0.0.1:42210
+fatal: protocol error: bad line length character: POST
+[60498] [60584] Disconnected (with error)
+[60585] Connection from 127.0.0.1:50726
+fatal: protocol error: bad line length character: POST
+[60498] [60585] Disconnected (with error)
+[60592] Connection from 127.0.0.1:50742
+fatal: protocol error: bad line length character: POST
+[60498] [60592] Disconnected (with error)
+[60593] Connection from 127.0.0.1:50756
+fatal: protocol error: bad line length character: POST
+[60498] [60593] Disconnected (with error)
+[60594] Connection from 127.0.0.1:50762
+fatal: protocol error: bad line length character: POST
+[60498] [60594] Disconnected (with error)
+[60595] Connection from 127.0.0.1:50764
+fatal: protocol error: bad line length character: POST
+[60498] [60595] Disconnected (with error)
+[60596] Connection from 127.0.0.1:55222
+fatal: protocol error: bad line length character: POST
+[60498] [60596] Disconnected (with error)
+[60601] Connection from 127.0.0.1:55236
+fatal: protocol error: bad line length character: POST
+[60498] [60601] Disconnected (with error)
+[60604] Connection from 127.0.0.1:55246
+fatal: protocol error: bad line length character: POST
+[60498] [60604] Disconnected (with error)
+[60605] Connection from 127.0.0.1:55252
+fatal: protocol error: bad line length character: POST
+[60498] [60605] Disconnected (with error)
+[60606] Connection from 127.0.0.1:55266
+fatal: protocol error: bad line length character: POST
+[60498] [60606] Disconnected (with error)
+[60607] Connection from 127.0.0.1:45808
+fatal: protocol error: bad line length character: POST
+[60498] [60607] Disconnected (with error)
+[60608] Connection from 127.0.0.1:45820
+fatal: protocol error: bad line length character: POST
+[60498] [60608] Disconnected (with error)
+[60615] Connection from 127.0.0.1:45832
+fatal: protocol error: bad line length character: POST
+[60498] [60615] Disconnected (with error)
+[60616] Connection from 127.0.0.1:45844
+fatal: protocol error: bad line length character: POST
+[60498] [60616] Disconnected (with error)
+[60617] Connection from 127.0.0.1:45858
+fatal: protocol error: bad line length character: POST
+[60498] [60617] Disconnected (with error)
+[60618] Connection from 127.0.0.1:58340
+fatal: protocol error: bad line length character: POST
+[60498] [60618] Disconnected (with error)
+[60619] Connection from 127.0.0.1:58344
+fatal: protocol error: bad line length character: POST
+[60498] [60619] Disconnected (with error)
+[60626] Connection from 127.0.0.1:58358
+fatal: protocol error: bad line length character: POST
+[60498] [60626] Disconnected (with error)
+[60627] Connection from 127.0.0.1:58370
+fatal: protocol error: bad line length character: POST
+[60498] [60627] Disconnected (with error)
+[60628] Connection from 127.0.0.1:58372
+fatal: protocol error: bad line length character: POST
+[60498] [60628] Disconnected (with error)
+[60629] Connection from 127.0.0.1:45826
+fatal: protocol error: bad line length character: POST
+[60498] [60629] Disconnected (with error)
+[60630] Connection from 127.0.0.1:45840
+fatal: protocol error: bad line length character: POST
+[60498] [60630] Disconnected (with error)
+[60637] Connection from 127.0.0.1:45842
+fatal: protocol error: bad line length character: POST
+[60498] [60637] Disconnected (with error)
+[60638] Connection from 127.0.0.1:45850
+fatal: protocol error: bad line length character: POST
+[60498] [60638] Disconnected (with error)
+[60639] Connection from 127.0.0.1:45862
+fatal: protocol error: bad line length character: POST
+[60498] [60639] Disconnected (with error)
+[60640] Connection from 127.0.0.1:46822
+fatal: protocol error: bad line length character: POST
+[60498] [60640] Disconnected (with error)
+[60641] Connection from 127.0.0.1:46826
+fatal: protocol error: bad line length character: POST
+[60498] [60641] Disconnected (with error)
+[60646] Connection from 127.0.0.1:46830
+fatal: protocol error: bad line length character: POST
+[60498] [60646] Disconnected (with error)
+[60649] Connection from 127.0.0.1:46834
+fatal: protocol error: bad line length character: POST
+[60498] [60649] Disconnected (with error)
+[60650] Connection from 127.0.0.1:46848
+fatal: protocol error: bad line length character: POST
+[60498] [60650] Disconnected (with error)
+[60651] Connection from 127.0.0.1:44110
+fatal: protocol error: bad line length character: POST
+[60498] [60651] Disconnected (with error)
+[60652] Connection from 127.0.0.1:44122
+fatal: protocol error: bad line length character: POST
+[60498] [60652] Disconnected (with error)
+[60653] Connection from 127.0.0.1:44134
+fatal: protocol error: bad line length character: POST
+[60498] [60653] Disconnected (with error)
+[60660] Connection from 127.0.0.1:44144
+fatal: protocol error: bad line length character: POST
+[60498] [60660] Disconnected (with error)
+[60661] Connection from 127.0.0.1:44160
+fatal: protocol error: bad line length character: POST
+[60498] [60661] Disconnected (with error)
+[60662] Connection from 127.0.0.1:60100
+fatal: protocol error: bad line length character: POST
+[60498] [60662] Disconnected (with error)
+[60663] Connection from 127.0.0.1:60110
+fatal: protocol error: bad line length character: POST
+[60498] [60663] Disconnected (with error)
+[60664] Connection from 127.0.0.1:60120
+fatal: protocol error: bad line length character: POST
+[60498] [60664] Disconnected (with error)
+[60670] Connection from 127.0.0.1:60134
+fatal: protocol error: bad line length character: POST
+[60498] [60670] Disconnected (with error)
+[60672] Connection from 127.0.0.1:60148
+fatal: protocol error: bad line length character: POST
+[60498] [60672] Disconnected (with error)
+[60673] Connection from 127.0.0.1:43636
+fatal: protocol error: bad line length character: POST
+[60498] [60673] Disconnected (with error)
+[60674] Connection from 127.0.0.1:43644
+fatal: protocol error: bad line length character: POST
+[60498] [60674] Disconnected (with error)
+[60676] Connection from 127.0.0.1:43646
+fatal: protocol error: bad line length character: POST
+[60498] [60676] Disconnected (with error)
+[60677] Connection from 127.0.0.1:43662
+fatal: protocol error: bad line length character: POST
+[60498] [60677] Disconnected (with error)
+[60684] Connection from 127.0.0.1:43668
+fatal: protocol error: bad line length character: POST
+[60498] [60684] Disconnected (with error)
+[60685] Connection from 127.0.0.1:45784
+fatal: protocol error: bad line length character: POST
+[60498] [60685] Disconnected (with error)
+[60686] Connection from 127.0.0.1:45796
+fatal: protocol error: bad line length character: POST
+[60498] [60686] Disconnected (with error)
+[60687] Connection from 127.0.0.1:45812
+fatal: protocol error: bad line length character: POST
+[60498] [60687] Disconnected (with error)
+[60688] Connection from 127.0.0.1:45816
+fatal: protocol error: bad line length character: POST
+[60498] [60688] Disconnected (with error)
+[60695] Connection from 127.0.0.1:45828
+fatal: protocol error: bad line length character: POST
+[60498] [60695] Disconnected (with error)
+[60696] Connection from 127.0.0.1:51724
+fatal: protocol error: bad line length character: POST
+[60498] [60696] Disconnected (with error)
+[60697] Connection from 127.0.0.1:51726
+fatal: protocol error: bad line length character: POST
+[60498] [60697] Disconnected (with error)
+[60698] Connection from 127.0.0.1:51730
+fatal: protocol error: bad line length character: POST
+[60498] [60698] Disconnected (with error)
+[60699] Connection from 127.0.0.1:51732
+fatal: protocol error: bad line length character: POST
+[60498] [60699] Disconnected (with error)
+[60704] Connection from 127.0.0.1:51740
+fatal: protocol error: bad line length character: POST
+[60498] [60704] Disconnected (with error)
+[60707] Connection from 127.0.0.1:49626
+fatal: protocol error: bad line length character: POST
+[60498] [60707] Disconnected (with error)
+[60708] Connection from 127.0.0.1:49630
+fatal: protocol error: bad line length character: POST
+[60498] [60708] Disconnected (with error)
+[60709] Connection from 127.0.0.1:49642
+fatal: protocol error: bad line length character: POST
+[60498] [60709] Disconnected (with error)
+[60710] Connection from 127.0.0.1:49646
+fatal: protocol error: bad line length character: POST
+[60498] [60710] Disconnected (with error)
+[60711] Connection from 127.0.0.1:49650
+fatal: protocol error: bad line length character: POST
+[60498] [60711] Disconnected (with error)
+[60718] Connection from 127.0.0.1:59074
+fatal: protocol error: bad line length character: POST
+[60498] [60718] Disconnected (with error)
+[60719] Connection from 127.0.0.1:59090
+fatal: protocol error: bad line length character: POST
+[60498] [60719] Disconnected (with error)
+[60720] Connection from 127.0.0.1:59096
+fatal: protocol error: bad line length character: POST
+[60498] [60720] Disconnected (with error)
+[60721] Connection from 127.0.0.1:59100
+fatal: protocol error: bad line length character: POST
+[60498] [60721] Disconnected (with error)
+[60722] Connection from 127.0.0.1:59104
+fatal: protocol error: bad line length character: POST
+[60498] [60722] Disconnected (with error)
+[60753] Connection from 127.0.0.1:53058
+fatal: protocol error: bad line length character: POST
+[60498] [60753] Disconnected (with error)
+[60757] Connection from 127.0.0.1:53062
+fatal: protocol error: bad line length character: POST
+[60498] [60757] Disconnected (with error)
+[60758] Connection from 127.0.0.1:53070
+fatal: protocol error: bad line length character: POST
+[60498] [60758] Disconnected (with error)
+[60759] Connection from 127.0.0.1:53082
+fatal: protocol error: bad line length character: POST
+[60498] [60759] Disconnected (with error)
+[60760] Connection from 127.0.0.1:53094
+fatal: protocol error: bad line length character: POST
+[60498] [60760] Disconnected (with error)
+[60761] Connection from 127.0.0.1:60740
+fatal: protocol error: bad line length character: POST
+[60498] [60761] Disconnected (with error)
+[60768] Connection from 127.0.0.1:60742
+fatal: protocol error: bad line length character: POST
+[60498] [60768] Disconnected (with error)
+[60769] Connection from 127.0.0.1:60748
+fatal: protocol error: bad line length character: POST
+[60498] [60769] Disconnected (with error)
+[60770] Connection from 127.0.0.1:60750
+fatal: protocol error: bad line length character: POST
+[60498] [60770] Disconnected (with error)
+[60771] Connection from 127.0.0.1:60758
+fatal: protocol error: bad line length character: POST
+[60498] [60771] Disconnected (with error)
+[60772] Connection from 127.0.0.1:55432
+fatal: protocol error: bad line length character: POST
+[60498] [60772] Disconnected (with error)
+[60777] Connection from 127.0.0.1:55438
+fatal: protocol error: bad line length character: POST
+[60498] [60777] Disconnected (with error)
+[60780] Connection from 127.0.0.1:55452
+fatal: protocol error: bad line length character: POST
+[60498] [60780] Disconnected (with error)
+[60781] Connection from 127.0.0.1:55460
+fatal: protocol error: bad line length character: POST
+[60498] [60781] Disconnected (with error)
+[60782] Connection from 127.0.0.1:55474
+fatal: protocol error: bad line length character: POST
+[60498] [60782] Disconnected (with error)
+[60783] Connection from 127.0.0.1:36630
+fatal: protocol error: bad line length character: POST
+[60498] [60783] Disconnected (with error)
+[60784] Connection from 127.0.0.1:36634
+fatal: protocol error: bad line length character: POST
+[60498] [60784] Disconnected (with error)
+[60791] Connection from 127.0.0.1:36636
+fatal: protocol error: bad line length character: POST
+[60498] [60791] Disconnected (with error)
+[60792] Connection from 127.0.0.1:36640
+fatal: protocol error: bad line length character: POST
+[60498] [60792] Disconnected (with error)
+[60793] Connection from 127.0.0.1:36648
+fatal: protocol error: bad line length character: POST
+[60498] [60793] Disconnected (with error)
+[60794] Connection from 127.0.0.1:46568
+fatal: protocol error: bad line length character: POST
+[60498] [60794] Disconnected (with error)
+[60795] Connection from 127.0.0.1:46572
+fatal: protocol error: bad line length character: POST
+[60498] [60795] Disconnected (with error)
+[60800] Connection from 127.0.0.1:46588
+fatal: protocol error: bad line length character: POST
+[60498] [60800] Disconnected (with error)
+[60803] Connection from 127.0.0.1:46592
+fatal: protocol error: bad line length character: POST
+[60498] [60803] Disconnected (with error)
+[60804] Connection from 127.0.0.1:46598
+fatal: protocol error: bad line length character: POST
+[60498] [60804] Disconnected (with error)
+[60805] Connection from 127.0.0.1:44962
+fatal: protocol error: bad line length character: POST
+[60498] [60805] Disconnected (with error)
+[60806] Connection from 127.0.0.1:44966
+fatal: protocol error: bad line length character: POST
+[60498] [60806] Disconnected (with error)
+[60807] Connection from 127.0.0.1:44970
+fatal: protocol error: bad line length character: POST
+[60498] [60807] Disconnected (with error)
+[60814] Connection from 127.0.0.1:44972
+fatal: protocol error: bad line length character: POST
+[60498] [60814] Disconnected (with error)
+[60815] Connection from 127.0.0.1:44982
+fatal: protocol error: bad line length character: POST
+[60498] [60815] Disconnected (with error)
+[60818] Connection from 127.0.0.1:41630
+fatal: protocol error: bad line length character: POST
+[60498] [60818] Disconnected (with error)
+[60819] Connection from 127.0.0.1:41638
+fatal: protocol error: bad line length character: POST
+[60498] [60819] Disconnected (with error)
+[60820] Connection from 127.0.0.1:41644
+fatal: protocol error: bad line length character: POST
+[60498] [60820] Disconnected (with error)
+[60825] Connection from 127.0.0.1:41652
+fatal: protocol error: bad line length character: POST
+[60498] [60825] Disconnected (with error)
+[60828] Connection from 127.0.0.1:41660
+fatal: protocol error: bad line length character: POST
+[60498] [60828] Disconnected (with error)
+[60829] Connection from 127.0.0.1:41872
+fatal: protocol error: bad line length character: POST
+[60498] [60829] Disconnected (with error)
+[60857] Connection from 127.0.0.1:41874
+fatal: protocol error: bad line length character: POST
+[60498] [60857] Disconnected (with error)
+[60858] Connection from 127.0.0.1:41888
+fatal: protocol error: bad line length character: POST
+[60498] [60858] Disconnected (with error)
+[61036] Connection from 127.0.0.1:41900
+fatal: protocol error: bad line length character: POST
+[60498] [61036] Disconnected (with error)
+[61043] Connection from 127.0.0.1:41914
+fatal: protocol error: bad line length character: POST
+[60498] [61043] Disconnected (with error)
+[61053] Connection from 127.0.0.1:41882
+fatal: protocol error: bad line length character: POST
+[60498] [61053] Disconnected (with error)
+[61055] Connection from 127.0.0.1:41894
+fatal: protocol error: bad line length character: POST
+[60498] [61055] Disconnected (with error)
+[61056] Connection from 127.0.0.1:41910
+fatal: protocol error: bad line length character: POST
+[60498] [61056] Disconnected (with error)
+[61057] Connection from 127.0.0.1:41922
+fatal: protocol error: bad line length character: POST
+[60498] [61057] Disconnected (with error)
+[61062] Connection from 127.0.0.1:41934
+fatal: protocol error: bad line length character: POST
+[60498] [61062] Disconnected (with error)
+[61065] Connection from 127.0.0.1:36288
+fatal: protocol error: bad line length character: POST
+[60498] [61065] Disconnected (with error)
+[61066] Connection from 127.0.0.1:36294
+fatal: protocol error: bad line length character: POST
+[60498] [61066] Disconnected (with error)
+[61067] Connection from 127.0.0.1:36306
+fatal: protocol error: bad line length character: POST
+[60498] [61067] Disconnected (with error)
+[61068] Connection from 127.0.0.1:36314
+fatal: protocol error: bad line length character: POST
+[60498] [61068] Disconnected (with error)
+[61069] Connection from 127.0.0.1:36324
+fatal: protocol error: bad line length character: POST
+[60498] [61069] Disconnected (with error)
+[61074] Connection from 127.0.0.1:38266
+fatal: protocol error: bad line length character: POST
+[60498] [61074] Disconnected (with error)
+[61077] Connection from 127.0.0.1:38282
+fatal: protocol error: bad line length character: POST
+[60498] [61077] Disconnected (with error)
+[61078] Connection from 127.0.0.1:38294
+fatal: protocol error: bad line length character: POST
+[60498] [61078] Disconnected (with error)
+[61079] Connection from 127.0.0.1:38306
+fatal: protocol error: bad line length character: POST
+[60498] [61079] Disconnected (with error)
+[61080] Connection from 127.0.0.1:38320
+fatal: protocol error: bad line length character: POST
+[60498] [61080] Disconnected (with error)
+[61081] Connection from 127.0.0.1:37388
+fatal: protocol error: bad line length character: POST
+[60498] [61081] Disconnected (with error)
+[61088] Connection from 127.0.0.1:37402
+fatal: protocol error: bad line length character: POST
+[60498] [61088] Disconnected (with error)
+[61089] Connection from 127.0.0.1:37406
+fatal: protocol error: bad line length character: POST
+[60498] [61089] Disconnected (with error)
+[61090] Connection from 127.0.0.1:37408
+fatal: protocol error: bad line length character: POST
+[60498] [61090] Disconnected (with error)
+[61091] Connection from 127.0.0.1:37416
+fatal: protocol error: bad line length character: POST
+[60498] [61091] Disconnected (with error)
+[61092] Connection from 127.0.0.1:57448
+fatal: protocol error: bad line length character: POST
+[60498] [61092] Disconnected (with error)
+[61097] Connection from 127.0.0.1:57452
+fatal: protocol error: bad line length character: POST
+[60498] [61097] Disconnected (with error)
+[61100] Connection from 127.0.0.1:57462
+fatal: protocol error: bad line length character: POST
+[60498] [61100] Disconnected (with error)
+[61101] Connection from 127.0.0.1:57478
+fatal: protocol error: bad line length character: POST
+[60498] [61101] Disconnected (with error)
+[61102] Connection from 127.0.0.1:57486
+fatal: protocol error: bad line length character: POST
+[60498] [61102] Disconnected (with error)
+[61103] Connection from 127.0.0.1:52458
+fatal: protocol error: bad line length character: POST
+[60498] [61103] Disconnected (with error)
+[61104] Connection from 127.0.0.1:52466
+fatal: protocol error: bad line length character: POST
+[60498] [61104] Disconnected (with error)
+[61111] Connection from 127.0.0.1:52472
+fatal: protocol error: bad line length character: POST
+[60498] [61111] Disconnected (with error)
+[61112] Connection from 127.0.0.1:52480
+fatal: protocol error: bad line length character: POST
+[60498] [61112] Disconnected (with error)
+[61113] Connection from 127.0.0.1:52494
+fatal: protocol error: bad line length character: POST
+[60498] [61113] Disconnected (with error)
+[61114] Connection from 127.0.0.1:41816
+fatal: protocol error: bad line length character: POST
+[60498] [61114] Disconnected (with error)
+[61115] Connection from 127.0.0.1:41830
+fatal: protocol error: bad line length character: POST
+[60498] [61115] Disconnected (with error)
+[61120] Connection from 127.0.0.1:41842
+fatal: protocol error: bad line length character: POST
+[60498] [61120] Disconnected (with error)
+[61123] Connection from 127.0.0.1:41858
+fatal: protocol error: bad line length character: POST
+[60498] [61123] Disconnected (with error)
+[61124] Connection from 127.0.0.1:41864
+fatal: protocol error: bad line length character: POST
+[60498] [61124] Disconnected (with error)
+[61125] Connection from 127.0.0.1:60264
+fatal: protocol error: bad line length character: POST
+[60498] [61125] Disconnected (with error)
+[61126] Connection from 127.0.0.1:60268
+fatal: protocol error: bad line length character: POST
+[60498] [61126] Disconnected (with error)
+[61127] Connection from 127.0.0.1:60274
+fatal: protocol error: bad line length character: POST
+[60498] [61127] Disconnected (with error)
+[61134] Connection from 127.0.0.1:60278
+fatal: protocol error: bad line length character: POST
+[60498] [61134] Disconnected (with error)
+[61135] Connection from 127.0.0.1:60286
+fatal: protocol error: bad line length character: POST
+[60498] [61135] Disconnected (with error)
+[61136] Connection from 127.0.0.1:46148
+fatal: protocol error: bad line length character: POST
+[60498] [61136] Disconnected (with error)
+[61137] Connection from 127.0.0.1:46156
+fatal: protocol error: bad line length character: POST
+[60498] [61137] Disconnected (with error)
+[61138] Connection from 127.0.0.1:46162
+fatal: protocol error: bad line length character: POST
+[60498] [61138] Disconnected (with error)
+[61143] Connection from 127.0.0.1:46174
+fatal: protocol error: bad line length character: POST
+[60498] [61143] Disconnected (with error)
+[61146] Connection from 127.0.0.1:46186
+fatal: protocol error: bad line length character: POST
+[60498] [61146] Disconnected (with error)
+[61147] Connection from 127.0.0.1:41586
+fatal: protocol error: bad line length character: POST
+[60498] [61147] Disconnected (with error)
+[61148] Connection from 127.0.0.1:41602
+fatal: protocol error: bad line length character: POST
+[60498] [61148] Disconnected (with error)
+[61149] Connection from 127.0.0.1:41606
+fatal: protocol error: bad line length character: POST
+[60498] [61149] Disconnected (with error)
+[61150] Connection from 127.0.0.1:41610
+fatal: protocol error: bad line length character: POST
+[60498] [61150] Disconnected (with error)
+[61157] Connection from 127.0.0.1:41612
+fatal: protocol error: bad line length character: POST
+[60498] [61157] Disconnected (with error)
