@@ -1,0 +1,139 @@
+
+ ⛅️ wrangler 4.83.0 (update available 4.85.0)
+─────────────────────────────────────────────
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mMultiple environments are defined in the Wrangler configuration file, but no target environment was specified for the deploy command.[0m
+
+  To avoid unintentional changes to the wrong environment, it is recommended to explicitly specify the target environment using the `-e|--env` flag.
+  If your intention is to use the top-level environment of your configuration simply pass an empty string to the flag to target such environment. For example `--env=""`.
+
+
+OpenNext project detected, calling `opennextjs-cloudflare deploy`
+
+┌──────────────────────────────┐
+│ OpenNext — Cloudflare deploy │
+└──────────────────────────────┘
+
+(node:47067) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+Incremental cache does not need populating
+Tag cache does not need populating
+
+ ⛅️ wrangler 4.83.0 (update available 4.85.0)
+─────────────────────────────────────────────
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mMultiple environments are defined in the Wrangler configuration file, but no target environment was specified for the deploy command.[0m
+
+  To avoid unintentional changes to the wrong environment, it is recommended to explicitly specify the target environment using the `-e|--env` flag.
+  If your intention is to use the top-level environment of your configuration simply pass an empty string to the flag to target such environment. For example `--env=""`.
+
+
+[custom build] Running: npm run build && npx open-next build
+[custom build] 
+[custom build] > mannt-check@1.0.0 build
+[custom build] > NODE_ENV=production next build
+[custom build] 
+[custom build] 
+[custom build]    ▲ Next.js 15.3.4
+[custom build] 
+[custom build]    - Environments: .env.local
+[custom build] 
+[custom build] 
+[custom build]    Creating an optimized production build ...
+[custom build] 
+[custom build]  ✓ Compiled successfully in 5.0s
+[custom build] 
+[custom build]    Skipping linting
+[custom build] 
+[custom build]    Checking validity of types ...
+[custom build] 
+[custom build]    Collecting page data ...
+[custom build] 
+[custom build] 
+[custom build] 
+[custom build] > Build error occurred
+[custom build] 
+[custom build] [Error: ENOENT: no such file or directory, open '/home/ubuntu/mannt-check/.next/build-manifest.json'] {
+[custom build]   errno: -2,
+[custom build]   code: 'ENOENT',
+[custom build]   syscall: 'open',
+[custom build]   path: '/home/ubuntu/mannt-check/.next/build-manifest.json'
+[custom build] }
+[custom build] 
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mError: Command failed with exit code 1: npm run build && npx open-next build[0m
+
+  
+  > Build error occurred
+  [Error: ENOENT: no such file or directory, open '/home/ubuntu/mannt-check/.next/build-manifest.json'] {
+    errno: -2,
+    code: 'ENOENT',
+    syscall: 'open',
+    path: '/home/ubuntu/mannt-check/.next/build-manifest.json'
+  }
+  
+  > mannt-check@1.0.0 build
+  > NODE_ENV=production next build
+  
+     ▲ Next.js 15.3.4
+     - Environments: .env.local
+  
+     Creating an optimized production build ...
+   ✓ Compiled successfully in 5.0s
+     Skipping linting
+     Checking validity of types ...
+     Collecting page data ...
+      at makeError (/home/ubuntu/mannt-check/node_modules/wrangler/wrangler-dist/cli.js:53869:18)
+      at handlePromise (/home/ubuntu/mannt-check/node_modules/wrangler/wrangler-dist/cli.js:54336:29)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async runCommand (/home/ubuntu/mannt-check/node_modules/wrangler/wrangler-dist/cli.js:135493:5)
+      at async runCustomBuild (/home/ubuntu/mannt-check/node_modules/wrangler/wrangler-dist/cli.js:135506:5)
+      at async getEntry (/home/ubuntu/mannt-check/node_modules/wrangler/wrangler-dist/cli.js:232336:3)
+      at async Object.handler (/home/ubuntu/mannt-check/node_modules/wrangler/wrangler-dist/cli.js:233402:23)
+      at async /home/ubuntu/mannt-check/node_modules/wrangler/wrangler-dist/cli.js:182085:26
+      at async Object.handler (/home/ubuntu/mannt-check/node_modules/wrangler/wrangler-dist/cli.js:182034:7) {
+    shortMessage: 'Command failed with exit code 1: npm run build && npx open-next build',
+    command: 'npm run build && npx open-next build',
+    escapedCommand: 'npm run build "&&" npx open-next build',
+    exitCode: 1,
+    signal: undefined,
+    signalDescription: undefined,
+    stdout: '\n' +
+      '> mannt-check@1.0.0 build\n' +
+      '> NODE_ENV=production next build\n' +
+      '\n' +
+      '   ▲ Next.js 15.3.4\n' +
+      '   - Environments: .env.local\n' +
+      '\n' +
+      '   Creating an optimized production build ...\n' +
+      ' ✓ Compiled successfully in 5.0s\n' +
+      '   Skipping linting\n' +
+      '   Checking validity of types ...\n' +
+      '   Collecting page data ...',
+    stderr: '\n' +
+      '> Build error occurred\n' +
+      "[Error: ENOENT: no such file or directory, open '/home/ubuntu/mannt-check/.next/build-manifest.json'] {\n" +
+      '  errno: -2,\n' +
+      "  code: 'ENOENT',\n" +
+      "  syscall: 'open',\n" +
+      "  path: '/home/ubuntu/mannt-check/.next/build-manifest.json'\n" +
+      '}',
+    failed: true,
+    timedOut: false,
+    isCanceled: false,
+    killed: false
+  }
+
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mRunning custom build `npm run build && npx open-next build` failed. There are likely more logs from your build command above.[0m
+
+
+🪵  Logs were written to "/home/ubuntu/.config/.wrangler/logs/wrangler-2026-04-26_15-36-23_552.log"
+ERROR Wrangler command failed
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1m[0m
+
+
+[32mIf you think this is a bug then please create an issue at https://github.com/cloudflare/workers-sdk/issues/new/choose[0m
+Note that there is a newer version of Wrangler available (4.85.0). Consider checking whether upgrading resolves this error.
+? Would you like to report this error to Cloudflare? Wrangler's output and the error details will be shared with the Wrangler team to help us diagnose and fix the issue.
+🤖 Using fallback value in non-interactive context: no
+🪵  Logs were written to "/home/ubuntu/.config/.wrangler/logs/wrangler-2026-04-26_15-36-18_835.log"

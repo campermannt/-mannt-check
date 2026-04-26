@@ -1,0 +1,18 @@
+# wrangler.toml dla frontendu na własnym koncie Cloudflare
+# Umieść ten plik w: mannt-check/.open-next/wrangler.toml
+# (po wykonaniu: NODE_ENV=production npx @opennextjs/cloudflare@1.16.6 build)
+
+name = "mannt-check"
+main = "worker.js"
+compatibility_date = "2024-12-01"
+compatibility_flags = ["nodejs_compat"]
+workers_dev = true
+
+# Custom domain — odkomentuj po wdrożeniu, gdy mannt.pl jest na Twoim koncie CF
+routes = [
+  { pattern = "app.mannt.pl", custom_domain = true }
+]
+
+[assets]
+directory = "./assets"
+binding = "ASSETS"
