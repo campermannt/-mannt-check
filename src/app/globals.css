@@ -312,3 +312,23 @@ textarea.field { resize: vertical; }
 /* ─── Dark mode field overrides ─────────────────────────────── */
 .dark .field { color: var(--text-primary); }
 .dark select.field option { background: #1a2a1d; color: var(--text-primary); }
+
+/* ─── Responsive Modal ─────────────────────────────────────── */
+:root {
+  --modal-radius: 24px;
+}
+
+@media (max-width: 640px) {
+  :root {
+    --modal-radius: 0px;
+  }
+  
+  /* Force modal to fill screen on mobile */
+  .anim-scale-in {
+    height: 100dvh !important;
+    max-height: 100dvh !important;
+    width: 100% !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+  }
+}

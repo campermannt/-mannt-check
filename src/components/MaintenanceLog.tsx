@@ -129,24 +129,26 @@ function ServiceRequestModal({
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4"
+      className="fixed inset-0 z-50 flex items-center sm:items-center justify-center sm:p-4"
       style={{ background: 'rgba(0,0,0,.6)', backdropFilter: 'blur(6px)' }}
       onClick={e => { if (e.target === e.currentTarget) onClose(); }}
     >
-      <div
-        className="anim-scale-in"
-        style={{
-          width: '100%',
-          maxWidth: 560,
-          maxHeight: '90vh',
-          background: 'var(--bg-card, #fff)',
-          borderRadius: '24px',
-          display: 'flex',
-          flexDirection: 'column',
-          boxShadow: '0 24px 60px rgba(0,0,0,.35)',
-          overflow: 'hidden',
-        }}
-      >
+          <div
+            className="anim-scale-in"
+            style={{
+              width: '100%',
+              maxWidth: 560,
+              height: 'auto',
+              maxHeight: '100dvh',
+              background: 'var(--bg-card, #fff)',
+              borderRadius: 'var(--modal-radius, 24px)',
+              display: 'flex',
+              flexDirection: 'column',
+              boxShadow: '0 24px 60px rgba(0,0,0,.35)',
+              overflow: 'hidden',
+              margin: 'auto'
+            }}
+          >
         {sent ? (
           /* ── Success ── */
           <div className="flex flex-col items-center justify-center text-center p-10" style={{ flex: 1 }}>
@@ -229,7 +231,7 @@ function ServiceRequestModal({
             </div>
 
             {/* ── Scrollable form body ── */}
-            <div style={{ overflowY: 'auto', flex: 1, padding: '20px 20px 0' }}>
+            <div style={{ overflowY: 'auto', flex: 1, padding: '20px 20px 20px' }}>
               <form id="service-form" onSubmit={handleSubmit} className="space-y-5">
 
                 {/* Vehicle info — readonly */}
