@@ -115,7 +115,7 @@ export function MajsterMannt({ onAction }: { onAction?: () => void }) {
     <div className="fixed bottom-6 right-6 z-50 flex flex-col bg-white shadow-2xl rounded-3xl overflow-hidden border border-gray-100" style={{ width: 'min(420px, 90vw)', height: 'min(600px, 80vh)' }}>
       <div className="bg-green-800 p-4 text-white flex justify-between items-center">
         <div>
-          <h3 className="font-bold">Majster Mannt <span className="text-[10px] opacity-50">v2.1</span></h3>
+          <h3 className="font-bold">Majster Mannt <span className="text-[10px] opacity-50">v2.2</span></h3>
           <p className="text-xs opacity-70">Zawsze pomocny</p>
         </div>
         <button onClick={() => setIsOpen(false)} className="text-white opacity-50 hover:opacity-100">✕</button>
@@ -124,7 +124,7 @@ export function MajsterMannt({ onAction }: { onAction?: () => void }) {
       <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-gray-50">
         {messages.length === 0 && (
           <div className="space-y-2">
-            <p className="text-sm font-bold text-gray-600">W czym mogę pomóc?</p>
+            <p className="text-sm font-bold text-gray-600 text-center">DZIAŁA! Nowa wersja v2.2 Majstra Mannta</p>
             {QUICK_QUESTIONS.map(q => (
               <button key={q} onClick={() => sendMessage(q)} className="block w-full text-left p-3 bg-white border border-gray-200 rounded-xl text-sm hover:border-green-500 transition-colors">
                 {q}
