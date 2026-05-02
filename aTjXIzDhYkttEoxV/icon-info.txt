@@ -1,0 +1,10 @@
+PWA Icons Required:
+- icon-192.png (192x192 pixels)
+- icon-512.png (512x512 pixels)
+
+These should feature the Mannt Check branding with:
+- Forest green (#1a4d2e) background
+- Orange (#ff8c42) accent
+- Simple, recognizable icon (e.g., camper van or checkmark symbol)
+
+For now, the app will work without these, but they should be added for proper PWA installation.
