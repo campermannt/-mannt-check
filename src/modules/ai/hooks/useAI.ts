@@ -56,7 +56,13 @@ interface NxcodeSDK {
   ready(): Promise<void>
 }
 
-const SDK_URL = "https://sdk.nxcode.ai/nxcode.js";
+// Safely handle the global Nxcode variable
+const getGlobalNxcode = (): NxcodeSDK | undefined => {
+  if (typeof window !== 'undefined') {
+    return (window as any).Nxcode;
+  }
+  return undefined;
+};
 
 export function useAI() {
   const [isLoading, setIsLoading] = useState(false)
