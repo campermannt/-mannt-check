@@ -129,20 +129,21 @@ function ServiceRequestModal({
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-end justify-center"
+      className="fixed inset-0 z-50 flex items-center justify-center p-4"
       style={{ background: 'rgba(0,0,0,.6)', backdropFilter: 'blur(6px)' }}
       onClick={e => { if (e.target === e.currentTarget) onClose(); }}
     >
       <div
+        className="anim-scale-in"
         style={{
           width: '100%',
           maxWidth: 560,
-          maxHeight: '92vh',
+          maxHeight: '90vh',
           background: 'var(--bg-card, #fff)',
-          borderRadius: '24px 24px 0 0',
+          borderRadius: '24px',
           display: 'flex',
           flexDirection: 'column',
-          boxShadow: '0 -12px 60px rgba(0,0,0,.25)',
+          boxShadow: '0 24px 60px rgba(0,0,0,.35)',
           overflow: 'hidden',
         }}
       >
