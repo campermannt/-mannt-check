@@ -12,7 +12,6 @@ export default function PolitykaPrywatnosci() {
   return (
     <div className="min-h-screen" style={{ background: 'linear-gradient(160deg, #061610 0%, #0c2416 20%, #153a1e 45%, #1a4d28 70%, #1f5830 100%)' }}>
       <div className="max-w-2xl mx-auto px-5 py-10">
-        {/* Back */}
         <Link
           href="/"
           className="inline-flex items-center gap-2 text-sm mb-8"
@@ -25,14 +24,12 @@ export default function PolitykaPrywatnosci() {
         </Link>
 
         <div style={{ background: '#ffffff', borderRadius: 24, padding: '40px 36px', boxShadow: '0 40px 100px rgba(0,0,0,.36)' }}>
-          {/* Logo */}
-          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/logo-header.png" alt="Camper Mannt" style={{ height: 40, width: 'auto', marginBottom: 28 }} />
 
           <h1 style={{ fontWeight: 900, fontSize: '1.75rem', letterSpacing: '-.04em', color: '#111827', marginBottom: 8 }}>
             Polityka Prywatności
           </h1>
-          <p style={{ color: '#6b7280', fontSize: '.85rem', marginBottom: 32 }}>Ostatnia aktualizacja: 19 kwietnia 2025 r.</p>
+          <p style={{ color: '#6b7280', fontSize: '.85rem', marginBottom: 32 }}>Ostatnia aktualizacja: 2 maja 2026 r.</p>
 
           <div style={{ color: '#374151', lineHeight: 1.75, fontSize: '.9375rem' }} className="space-y-6">
 
@@ -46,84 +43,55 @@ export default function PolitykaPrywatnosci() {
 
             <section>
               <h2 style={{ fontWeight: 800, fontSize: '1.0625rem', color: '#111827', marginBottom: 10 }}>2. Jakie dane zbieramy</h2>
-              <p>Aplikacja zbiera wyłącznie dane, które Użytkownik sam wprowadza:</p>
-              <ul style={{ paddingLeft: 20, marginTop: 8, listStyleType: 'disc', lineHeight: 2 }}>
-                <li><strong>Nick (pseudonim)</strong> — używany jako login, nie jest to imię ani nazwisko</li>
-                <li><strong>Hasło</strong> — przechowywane wyłącznie w postaci zaszyfrowanej (SHA-256 + sól)</li>
-                <li><strong>Dane pojazdu</strong> — marka, model, rok, przebieg, numer rejestracyjny (opcjonalny)</li>
-                <li><strong>Checklisty i wpisy serwisowe</strong> — treści wprowadzone przez Użytkownika</li>
-                <li><strong>Dane techniczne sesji</strong> — token sesji (ważny 30 dni), przechowywany w localStorage</li>
+              <p>Aplikacja zbiera dane niezbędne do świadczenia usług serwisowych i prowadzenia konta:</p>
+              <ul style={{ paddingLeft: 20, marginTop: 8, listStyleType: 'disc', lineHeight: 1.8 }}>
+                <li><strong>Dane konta:</strong> Nick (pseudonim) oraz zaszyfrowane hasło.</li>
+                <li><strong>Dane pojazdu:</strong> Marka, model, rok, przebieg, numer rejestracyjny oraz numer VIN (opcjonalnie).</li>
+                <li><strong>Dane zgłoszeń serwisowych:</strong> Adres e-mail kontaktowy, treść zgłoszenia oraz <strong>zdjęcia dokumentujące usterkę</strong> przesyłane przez Użytkownika.</li>
+                <li><strong>Dane techniczne:</strong> Token sesji, adres IP (wyłącznie w logach serwera dla bezpieczeństwa).</li>
               </ul>
-              <p style={{ marginTop: 8 }}>Nie zbieramy adresów e-mail, numerów telefonów, adresów zamieszkania ani żadnych innych danych osobowych.</p>
             </section>
 
             <hr style={{ border: 'none', borderTop: '1px solid #e5e7eb' }} />
 
             <section>
               <h2 style={{ fontWeight: 800, fontSize: '1.0625rem', color: '#111827', marginBottom: 10 }}>3. Cel i podstawa przetwarzania</h2>
-              <p>Dane przetwarzane są wyłącznie w celu świadczenia usługi Mannt Check (art. 6 ust. 1 lit. b RODO — wykonanie umowy):</p>
-              <ul style={{ paddingLeft: 20, marginTop: 8, listStyleType: 'disc', lineHeight: 2 }}>
-                <li>Uwierzytelnienie Użytkownika (logowanie)</li>
-                <li>Synchronizacja danych między urządzeniami</li>
-                <li>Przechowywanie historii serwisowej pojazdu</li>
+              <p>Dane przetwarzane są w celu:</p>
+              <ul style={{ paddingLeft: 20, marginTop: 8, listStyleType: 'disc', lineHeight: 1.8 }}>
+                <li>Wykonania umowy o świadczenie usług drogą elektroniczną (art. 6 ust. 1 lit. b RODO).</li>
+                <li><strong>Obsługi zgłoszeń serwisowych</strong> i komunikacji z Użytkownikiem (prawnie uzasadniony interes — art. 6 ust. 1 lit. f RODO).</li>
+                <li>Zapewnienia bezpieczeństwa aplikacji i ochrony przed nadużyciami.</li>
               </ul>
             </section>
 
             <hr style={{ border: 'none', borderTop: '1px solid #e5e7eb' }} />
 
             <section>
-              <h2 style={{ fontWeight: 800, fontSize: '1.0625rem', color: '#111827', marginBottom: 10 }}>4. Przechowywanie danych</h2>
-              <p>Dane przechowywane są na serwerach Cloudflare (infrastruktura Workers/KV) zlokalizowanych na terenie UE lub w krajach zapewniających odpowiedni poziom ochrony danych zgodnie z RODO.</p>
-              <p style={{ marginTop: 8 }}>Dane lokalne (localStorage) przechowywane są wyłącznie na urządzeniu Użytkownika.</p>
-            </section>
-
-            <hr style={{ border: 'none', borderTop: '1px solid #e5e7eb' }} />
-
-            <section>
-              <h2 style={{ fontWeight: 800, fontSize: '1.0625rem', color: '#111827', marginBottom: 10 }}>5. Udostępnianie danych</h2>
-              <p>Dane Użytkownika <strong>nie są sprzedawane ani udostępniane</strong> osobom trzecim w celach marketingowych ani innych celach komercyjnych.</p>
-              <p style={{ marginTop: 8 }}>Dane techniczne mogą być przetwarzane przez dostawcę infrastruktury (Cloudflare) wyłącznie w zakresie niezbędnym do świadczenia usługi hostingowej.</p>
-            </section>
-
-            <hr style={{ border: 'none', borderTop: '1px solid #e5e7eb' }} />
-
-            <section>
-              <h2 style={{ fontWeight: 800, fontSize: '1.0625rem', color: '#111827', marginBottom: 10 }}>6. Prawa Użytkownika (RODO)</h2>
-              <p>Zgodnie z RODO przysługują Ci następujące prawa:</p>
-              <ul style={{ paddingLeft: 20, marginTop: 8, listStyleType: 'disc', lineHeight: 2 }}>
-                <li><strong>Prawo dostępu</strong> — możesz zażądać informacji o przetwarzanych danych</li>
-                <li><strong>Prawo do sprostowania</strong> — możesz poprawić swoje dane w aplikacji</li>
-                <li><strong>Prawo do usunięcia (prawo do bycia zapomnianym)</strong> — możesz usunąć konto i wszystkie dane jednym kliknięciem w zakładce <em>Pojazd → Ustawienia konta</em>, lub wysyłając e-mail na <a href="mailto:camper@mannt.pl" style={{ color: '#1a4522', fontWeight: 600 }}>camper@mannt.pl</a></li>
-                <li><strong>Prawo do przenoszenia danych</strong> — na żądanie udostępnimy dane w formacie JSON</li>
-                <li><strong>Prawo do wniesienia skargi</strong> — do Prezesa Urzędu Ochrony Danych Osobowych (UODO)</li>
+              <h2 style={{ fontWeight: 800, fontSize: '1.0625rem', color: '#111827', marginBottom: 10 }}>4. Odbiorcy danych</h2>
+              <p>Dane mogą być przekazywane zaufanym podmiotom współpracującym, wyłącznie w celu realizacji usług:</p>
+              <ul style={{ paddingLeft: 20, marginTop: 8, listStyleType: 'disc', lineHeight: 1.8 }}>
+                <li><strong>Cloudflare:</strong> Dostawca infrastruktury hostingowej i bezpieczeństwa.</li>
+                <li><strong>Dostawcy usług pocztowych:</strong> W celu przesyłania zgłoszeń serwisowych z załącznikami (zdjęciami) do Operatora.</li>
               </ul>
             </section>
 
             <hr style={{ border: 'none', borderTop: '1px solid #e5e7eb' }} />
 
             <section>
-              <h2 style={{ fontWeight: 800, fontSize: '1.0625rem', color: '#111827', marginBottom: 10 }}>7. Pliki cookie i localStorage</h2>
-              <p>Aplikacja nie używa plików cookie (cookies) do śledzenia Użytkownika. Korzystamy wyłącznie z <strong>localStorage</strong> przeglądarki do:</p>
-              <ul style={{ paddingLeft: 20, marginTop: 8, listStyleType: 'disc', lineHeight: 2 }}>
-                <li>Przechowywania tokenu sesji (logowania)</li>
-                <li>Lokalnego cache danych pojazdu i checklisty</li>
-                <li>Ustawień interfejsu (tryb ciemny)</li>
-              </ul>
-              <p style={{ marginTop: 8 }}>Te dane nie opuszczają urządzenia Użytkownika, z wyjątkiem synchronizacji z serwerem po zalogowaniu.</p>
+              <h2 style={{ fontWeight: 800, fontSize: '1.0625rem', color: '#111827', marginBottom: 10 }}>5. Przechowywanie zdjęć i plików</h2>
+              <p>Zdjęcia przesyłane w zgłoszeniach serwisowych są przekazywane bezpośrednio do Operatora i nie są publicznie udostępniane. Operator przechowuje je przez okres niezbędny do realizacji zgłoszenia lub do czasu wycofania zgody przez Użytkownika.</p>
             </section>
 
             <hr style={{ border: 'none', borderTop: '1px solid #e5e7eb' }} />
 
             <section>
-              <h2 style={{ fontWeight: 800, fontSize: '1.0625rem', color: '#111827', marginBottom: 10 }}>8. Kontakt w sprawach prywatności</h2>
-              <p>W sprawach dotyczących ochrony danych osobowych prosimy o kontakt:</p>
-              <div style={{ marginTop: 12, padding: '16px 20px', background: '#f0fdf4', borderRadius: 12, border: '1px solid #86efac' }}>
-                <p style={{ fontWeight: 700, color: '#15803d' }}>Mannt Serwis Kielce</p>
-                <p style={{ marginTop: 4 }}>E-mail: <a href="mailto:camper@mannt.pl" style={{ color: '#1a4522', fontWeight: 700 }}>camper@mannt.pl</a></p>
-                <p style={{ marginTop: 2 }}>Strona: <a href="https://mannt.pl" target="_blank" rel="noopener noreferrer" style={{ color: '#1a4522' }}>mannt.pl</a></p>
-              </div>
+              <h2 style={{ fontWeight: 800, fontSize: '1.0625rem', color: '#111827', marginBottom: 10 }}>6. Prawa Użytkownika</h2>
+              <p>Przysługuje Ci prawo do dostępu, sprostowania, usunięcia danych, ograniczenia przetwarzania, przenoszenia danych oraz wniesienia sprzeciwu. W celu realizacji praw skontaktuj się z nami pod adresem: <a href="mailto:camper@mannt.pl" style={{ color: '#1a4522', fontWeight: 600 }}>camper@mannt.pl</a>.</p>
             </section>
 
+            <section style={{ marginTop: 30, padding: '20px', background: '#f9fafb', borderRadius: 16, border: '1px solid #e5e7eb' }}>
+              <p style={{ fontSize: '.85rem', color: '#4b5563' }}>Korzystając z formularza zgłoszenia serwisowego i załączając zdjęcia, dobrowolnie wyrażasz zgodę na ich przetwarzanie przez Mannt Serwis Kielce w celu obsługi Twojego zapytania.</p>
+            </section>
           </div>
 
           <div style={{ marginTop: 36, paddingTop: 24, borderTop: '1px solid #e5e7eb', display: 'flex', gap: 16, flexWrap: 'wrap' }}>
@@ -135,10 +103,6 @@ export default function PolitykaPrywatnosci() {
             </Link>
           </div>
         </div>
-
-        <p style={{ color: 'rgba(255,255,255,.22)', fontSize: '.7rem', textAlign: 'center', marginTop: 24 }}>
-          © 2025 Mannt Serwis Kielce
-        </p>
       </div>
     </div>
   );

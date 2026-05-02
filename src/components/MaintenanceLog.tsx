@@ -595,17 +595,57 @@ export function MaintenanceLogComponent({ userId, vehicleId, onAction }: Mainten
               </select>
             </div>
 
-            <div>
-              <label className="field-label">Opis</label>
-              <textarea
-                required
-                value={formData.description}
-                onChange={e => setFormData(p => ({ ...p, description: e.target.value }))}
-                className="field"
-                style={{ minHeight: '96px' }}
-                placeholder="Opisz wykonaną czynność lub usterkę…"
-              />
-            </div>
+                <div>
+                  <label className="field-label">Opis</label>
+                  <textarea
+                    required
+                    value={description}
+                    onChange={e => setDescription(e.target.value)}
+                    className="field"
+                    style={{ minHeight: '96px' }}
+                    placeholder="Opisz problem lub usługę, której potrzebujesz…"
+                  />
+                </div>
+
+                {/* Photos */}
+                <div>
+                  <label className="field-label">Zdjęcia (max {MAX_PHOTOS})</label>
+                  <div className="flex flex-wrap gap-3">
+                    {photos.map(photo => (
+                      <div key={photo.id} className="relative w-24 h-24 rounded-xl overflow-hidden group">
+                        <img src={photo.preview} alt={photo.name} className="w-full h-full object-cover" />
+                        <button
+                          type="button"
+                          onClick={() => removePhoto(photo.id)}
+                          className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity text-white"
+                        >
+                          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+                            <path d="M18 6L6 18M6 6l12 12"/>
+                          </svg>
+                        </button>
+                      </div>
+                    ))}
+                    {photos.length < MAX_PHOTOS && (
+                      <button
+                        type="button"
+                        onClick={() => fileInputRef.current?.click()}
+                        className="w-24 h-24 rounded-xl border-2 border-dashed border-gray-300 flex items-center justify-center text-gray-400 hover:border-gray-400 transition-colors"
+                      >
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M12 5v14M5 12h14"/>
+                        </svg>
+                      </button>
+                    )}
+                  </div>
+                  <input
+                    type="file"
+                    ref={fileInputRef}
+                    multiple
+                    accept="image/*"
+                    onChange={handlePhotoAdd}
+                    style={{ display: 'none' }}
+                  />
+                </div>
 
             <div className="grid grid-cols-3 gap-3">
               <div>

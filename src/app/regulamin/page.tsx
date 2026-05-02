@@ -32,14 +32,13 @@ export default function RegulamPage() {
           <h1 style={{ fontWeight: 900, fontSize: '1.75rem', letterSpacing: '-.04em', color: '#111827', marginBottom: 8 }}>
             Regulamin aplikacji Mannt Check
           </h1>
-          <p style={{ color: '#6b7280', fontSize: '.85rem', marginBottom: 32 }}>Ostatnia aktualizacja: 19 kwietnia 2025 r.</p>
+          <p style={{ color: '#6b7280', fontSize: '.85rem', marginBottom: 32 }}>Ostatnia aktualizacja: 2 maja 2026 r.</p>
 
           <div style={{ color: '#374151', lineHeight: 1.75, fontSize: '.9375rem' }} className="space-y-6">
 
             <section>
               <h2 style={{ fontWeight: 800, fontSize: '1.0625rem', color: '#111827', marginBottom: 10 }}>§1. Postanowienia ogólne</h2>
-              <p>Niniejszy Regulamin określa zasady korzystania z aplikacji internetowej <strong>Mannt Check</strong> (dalej: „Aplikacja"), dostępnej pod adresem <a href="https://thr-50b4d891-mannt-check.nxcode-io.workers.dev" style={{ color: '#1a4522' }}>mannt-check.nxcode-io.workers.dev</a> oraz jako aplikacja PWA na urządzeniach mobilnych.</p>
-              <p style={{ marginTop: 8 }}>Operatorem Aplikacji jest firma <strong>Mannt Serwis Kielce</strong> z siedzibą w Kielcach, świadcząca usługi serwisowe i budowy zabudów kamperów.</p>
+              <p>Niniejszy Regulamin określa zasady korzystania z aplikacji internetowej <strong>Mannt Check</strong> (dalej: „Aplikacja"), której operatorem jest firma <strong>Mannt Serwis Kielce</strong>.</p>
               <p style={{ marginTop: 8 }}>Kontakt: <a href="mailto:camper@mannt.pl" style={{ color: '#1a4522', fontWeight: 600 }}>camper@mannt.pl</a></p>
             </section>
 
@@ -53,56 +52,38 @@ export default function RegulamPage() {
                 <li>Prowadzenie checklisty przed wyjazdem</li>
                 <li>Dziennik serwisowy — rejestracja wykonanych napraw i przeglądów</li>
                 <li>Kalkulator kosztów podróży</li>
+                <li><strong>Elektroniczne zgłoszenia serwisowe</strong> wraz z możliwością przesyłania dokumentacji fotograficznej</li>
                 <li>Asystent techniczny AI (Majster Mannt)</li>
-                <li>Synchronizacja danych między urządzeniami po zalogowaniu</li>
               </ul>
             </section>
 
             <hr style={{ border: 'none', borderTop: '1px solid #e5e7eb' }} />
 
             <section>
-              <h2 style={{ fontWeight: 800, fontSize: '1.0625rem', color: '#111827', marginBottom: 10 }}>§3. Konto użytkownika</h2>
-              <p>Korzystanie z pełni funkcjonalności Aplikacji wymaga założenia konta. Użytkownik podaje nick (pseudonim) oraz hasło. Nie są wymagane dane osobowe takie jak imię, nazwisko czy adres e-mail.</p>
-              <p style={{ marginTop: 8 }}>Użytkownik jest zobowiązany do nieudostępniania swojego hasła osobom trzecim. Operator nie ponosi odpowiedzialności za nieuprawniony dostęp wynikający z nieostrożności Użytkownika.</p>
+              <h2 style={{ fontWeight: 800, fontSize: '1.0625rem', color: '#111827', marginBottom: 10 }}>§3. Przesyłanie treści i zdjęć</h2>
+              <p>Użytkownik przesyłający zdjęcia w ramach zgłoszenia serwisowego oświadcza, że posiada prawo do dysponowania przesyłanymi materiałami oraz wyraża zgodę na ich przetwarzanie przez Operatora wyłącznie w celu realizacji usługi serwisowej.</p>
             </section>
 
             <hr style={{ border: 'none', borderTop: '1px solid #e5e7eb' }} />
 
             <section>
               <h2 style={{ fontWeight: 800, fontSize: '1.0625rem', color: '#111827', marginBottom: 10 }}>§4. Dane i synchronizacja</h2>
-              <p>Dane wprowadzone przez Użytkownika są przechowywane lokalnie na urządzeniu (localStorage) oraz, po zalogowaniu, synchronizowane z serwerem Operatora w celu umożliwienia dostępu z różnych urządzeń.</p>
-              <p style={{ marginTop: 8 }}>Operator nie sprzedaje ani nie udostępnia danych Użytkownika osobom trzecim.</p>
+              <p>Dane wprowadzone przez Użytkownika są przechowywane lokalnie na urządzeniu oraz synchronizowane z serwerem Operatora. Szczegółowe zasady ochrony danych określa Polityka Prywatności.</p>
             </section>
 
             <hr style={{ border: 'none', borderTop: '1px solid #e5e7eb' }} />
 
             <section>
-              <h2 style={{ fontWeight: 800, fontSize: '1.0625rem', color: '#111827', marginBottom: 10 }}>§5. Usunięcie konta</h2>
-              <p>Użytkownik może w każdej chwili usunąć swoje konto wraz ze wszystkimi danymi. Funkcja dostępna jest w zakładce <strong>Pojazd → Ustawienia konta</strong>. Usunięcie jest nieodwracalne.</p>
-              <p style={{ marginTop: 8 }}>Żądanie usunięcia danych można również zgłosić mailowo: <a href="mailto:camper@mannt.pl" style={{ color: '#1a4522', fontWeight: 600 }}>camper@mannt.pl</a></p>
+              <h2 style={{ fontWeight: 800, fontSize: '1.0625rem', color: '#111827', marginBottom: 10 }}>§5. Odpowiedzialność</h2>
+              <p>Aplikacja jest udostępniana w stanie „takim, jakim jest". Operator nie ponosi odpowiedzialności za treści przesyłane przez Użytkowników ani za decyzje podjęte na podstawie danych w aplikacji.</p>
             </section>
 
             <hr style={{ border: 'none', borderTop: '1px solid #e5e7eb' }} />
 
             <section>
-              <h2 style={{ fontWeight: 800, fontSize: '1.0625rem', color: '#111827', marginBottom: 10 }}>§6. Odpowiedzialność</h2>
-              <p>Aplikacja jest udostępniana w stanie „takim, jakim jest". Operator dokłada starań, aby działała bez zakłóceń, lecz nie gwarantuje nieprzerwanej dostępności. Operator nie ponosi odpowiedzialności za decyzje podjęte na podstawie danych wprowadzonych przez Użytkownika.</p>
-            </section>
-
-            <hr style={{ border: 'none', borderTop: '1px solid #e5e7eb' }} />
-
-            <section>
-              <h2 style={{ fontWeight: 800, fontSize: '1.0625rem', color: '#111827', marginBottom: 10 }}>§7. Zmiany Regulaminu</h2>
-              <p>Operator zastrzega sobie prawo do zmiany Regulaminu. O istotnych zmianach Użytkownicy zostaną poinformowani poprzez komunikat w Aplikacji.</p>
-            </section>
-
-            <hr style={{ border: 'none', borderTop: '1px solid #e5e7eb' }} />
-
-            <section>
-              <h2 style={{ fontWeight: 800, fontSize: '1.0625rem', color: '#111827', marginBottom: 10 }}>§8. Kontakt</h2>
+              <h2 style={{ fontWeight: 800, fontSize: '1.0625rem', color: '#111827', marginBottom: 10 }}>§6. Kontakt</h2>
               <p>Wszelkie pytania dotyczące Regulaminu prosimy kierować na adres:</p>
               <p style={{ marginTop: 8 }}><a href="mailto:camper@mannt.pl" style={{ color: '#1a4522', fontWeight: 700, fontSize: '1rem' }}>camper@mannt.pl</a></p>
-              <p style={{ marginTop: 4 }}><a href="https://mannt.pl" target="_blank" rel="noopener noreferrer" style={{ color: '#1a4522' }}>mannt.pl</a></p>
             </section>
 
           </div>

@@ -350,12 +350,14 @@ export function TravelCalculator({ onAction, vehicleId }: TravelCalculatorProps)
 
       // Ensure we use the global google object correctly for the service call
       const result = await new Promise<google.maps.DirectionsResult>((resolve, reject) => {
-        window.google.maps.event.trigger(window, 'resize'); // nudge
+        // We use a small timeout to ensure the DOM is ready if needed, 
+        // though DirectionsService is independent of the DOM.
         service.route(req, (res, status) => {
           if (status === 'OK' && res) {
             resolve(res);
           } else {
-            console.error('Directions request failed due to ' + status);
+            // Log the detailed status for debugging
+            console.error('Directions request failed with status:', status);
             reject(new Error(status as string));
           }
         });
