@@ -30,7 +30,10 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/icon-192.png" />
         <Script
           src="https://sdk.nxcode.ai/nxcode.js"
-          strategy="beforeInteractive"
+          strategy="lazyOnload"
+          onLoad={() => {
+            console.log('Nxcode SDK loaded successfully')
+          }}
           onError={(e) => {
             console.error('Failed to load Nxcode SDK:', e)
           }}

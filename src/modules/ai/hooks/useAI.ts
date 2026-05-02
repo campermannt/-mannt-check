@@ -62,12 +62,35 @@ export function useAI() {
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
+  const getNxcode = useCallback(async () => {
+    if (typeof window === 'undefined') {
+      throw new Error('AI features are only available in the browser')
+    }
+
+    // Wait for Nxcode to be available on window if it's not yet
+    let attempts = 0
+    const maxAttempts = 50 // 5 seconds total
+    
+    while (typeof (window as any).Nxcode === 'undefined' && attempts < maxAttempts) {
+      await new Promise(resolve => setTimeout(resolve, 100))
+      attempts++
+    }
+
+    const sdk = (window as any).Nxcode as NxcodeSDK
+    if (!sdk) {
+      throw new Error('Nxcode SDK not found. Please check your internet connection or layout scripts.')
+    }
+
+    await sdk.ready()
+    return sdk
+  }, [])
+
   const chat = useCallback(async (options: ChatOptions): Promise<ChatResponse> => {
     setIsLoading(true)
     setError(null)
     try {
-      await Nxcode.ready()
-      return await Nxcode.ai.chat(options)
+      const sdk = await getNxcode()
+      return await sdk.ai.chat(options)
     } catch (err) {
       const message = err instanceof Error ? err.message : 'AI request failed'
       setError(message)
@@ -75,14 +98,14 @@ export function useAI() {
     } finally {
       setIsLoading(false)
     }
-  }, [])
+  }, [getNxcode])
 
   const generate = useCallback(async (options: GenerateOptions): Promise<GenerateResponse> => {
     setIsLoading(true)
     setError(null)
     try {
-      await Nxcode.ready()
-      return await Nxcode.ai.generate(options)
+      const sdk = await getNxcode()
+      return await sdk.ai.generate(options)
     } catch (err) {
       const message = err instanceof Error ? err.message : 'AI request failed'
       setError(message)
@@ -90,7 +113,7 @@ export function useAI() {
     } finally {
       setIsLoading(false)
     }
-  }, [])
+  }, [getNxcode])
 
   const chatStream = useCallback(async (
     options: ChatOptions,
@@ -99,8 +122,8 @@ export function useAI() {
     setIsLoading(true)
     setError(null)
     try {
-      await Nxcode.ready()
-      await Nxcode.ai.chatStream({ ...options, onChunk })
+      const sdk = await getNxcode()
+      await sdk.ai.chatStream({ ...options, onChunk })
     } catch (err) {
       const message = err instanceof Error ? err.message : 'AI request failed'
       setError(message)
@@ -108,7 +131,7 @@ export function useAI() {
     } finally {
       setIsLoading(false)
     }
-  }, [])
+  }, [getNxcode])
 
   const generateStream = useCallback(async (
     options: GenerateOptions,
@@ -117,8 +140,8 @@ export function useAI() {
     setIsLoading(true)
     setError(null)
     try {
-      await Nxcode.ready()
-      await Nxcode.ai.generateStream({ ...options, onChunk })
+      const sdk = await getNxcode()
+      await sdk.ai.generateStream({ ...options, onChunk })
     } catch (err) {
       const message = err instanceof Error ? err.message : 'AI request failed'
       setError(message)
@@ -126,7 +149,7 @@ export function useAI() {
     } finally {
       setIsLoading(false)
     }
-  }, [])
+  }, [getNxcode])
 
   return {
     chat,
