@@ -7,7 +7,7 @@
  */
 
 import { useState, useRef, useEffect, FormEvent } from 'react'
-import { useAI, type ChatMessage } from '../hooks/useAI'
+import { useAI as useManntAI, type ChatMessage } from '../hooks/useManntAI'
 
 interface ChatBoxProps {
   /** System prompt to set AI behavior */
@@ -29,7 +29,7 @@ export function ChatBox({
   className,
   onMessage
 }: ChatBoxProps) {
-  const { chatStream, isLoading, error } = useAI()
+  const { chatStream, isLoading, error } = useManntAI()
   const [messages, setMessages] = useState<ChatMessage[]>([])
   const [input, setInput] = useState('')
   const [streamingContent, setStreamingContent] = useState('')

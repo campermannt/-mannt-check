@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
-import { useAI, type ChatMessage } from '@/modules/ai/hooks/useAI';
+import { useAI as useManntAI, type ChatMessage } from '@/modules/ai/hooks/useManntAI';
 
 const MAJSTER_PROMPT = `Jesteś Majster Mannt - doświadczony mechanik i doradca techniczny specjalizujący się w kamperach i przyczepach kempingowych.
 
@@ -30,7 +30,7 @@ const QUICK_QUESTIONS = [
 interface MajsterManntProps { onAction?: () => void; }
 
 export function MajsterMannt({ onAction }: MajsterManntProps) {
-  const { chatStream, isLoading, error } = useAI();
+  const { chatStream, isLoading, error } = useManntAI();
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [input, setInput] = useState('');
   const [streamingContent, setStreamingContent] = useState('');
