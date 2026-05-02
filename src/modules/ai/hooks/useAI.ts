@@ -9,7 +9,7 @@
 
 import { useState, useCallback } from 'react'
 
-// Nxcode SDK types (SDK loaded via script tag as global)
+// Nxcode SDK types
 interface ChatMessage {
   role: 'user' | 'assistant' | 'system'
   content: string
@@ -56,34 +56,65 @@ interface NxcodeSDK {
   ready(): Promise<void>
 }
 
-declare const Nxcode: NxcodeSDK
+const SDK_URL = "https://sdk.nxcode.ai/nxcode.js";
 
 export function useAI() {
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
+
+  const loadScript = useCallback((): Promise<void> => {
+    return new Promise((resolve, reject) => {
+      if (typeof window === 'undefined') return reject(new Error('Browser only'));
+      
+      // If already loaded
+      if ((window as any).Nxcode) return resolve();
+
+      // Check if script is already in document
+      const existingScript = document.querySelector(`script[src="${SDK_URL}"]`);
+      if (existingScript) {
+        existingScript.addEventListener('load', () => resolve());
+        existingScript.addEventListener('error', () => reject(new Error('Failed to load AI SDK script')));
+        return;
+      }
+
+      // Create and inject script
+      const script = document.createElement('script');
+      script.src = SDK_URL;
+      script.async = true;
+      script.onload = () => resolve();
+      script.onerror = () => reject(new Error('Failed to load AI SDK script'));
+      document.head.appendChild(script);
+    });
+  }, []);
 
   const getNxcode = useCallback(async () => {
     if (typeof window === 'undefined') {
       throw new Error('AI features are only available in the browser')
     }
 
-    // Wait for Nxcode to be available on window if it's not yet
-    let attempts = 0
-    const maxAttempts = 50 // 5 seconds total
+    try {
+      await loadScript();
+    } catch (e) {
+      console.error("SDK Load Error:", e);
+    }
+
+    // Wait for Nxcode to be available on window with polling
+    let attempts = 0;
+    const maxAttempts = 60; // 6 seconds
     
     while (typeof (window as any).Nxcode === 'undefined' && attempts < maxAttempts) {
-      await new Promise(resolve => setTimeout(resolve, 100))
-      attempts++
+      await new Promise(resolve => setTimeout(resolve, 100));
+      attempts++;
     }
 
-    const sdk = (window as any).Nxcode as NxcodeSDK
+    const sdk = (window as any).Nxcode as NxcodeSDK;
     if (!sdk) {
-      throw new Error('Nxcode SDK not found. Please check your internet connection or layout scripts.')
+      throw new Error('Nxcode SDK not found after loading attempt. Please check your connection.');
     }
 
-    await sdk.ready()
-    return sdk
-  }, [])
+    await sdk.ready();
+    return sdk;
+  }, [loadScript]);
 
   const chat = useCallback(async (options: ChatOptions): Promise<ChatResponse> => {
     setIsLoading(true)
@@ -94,6 +125,7 @@ export function useAI() {
     } catch (err) {
       const message = err instanceof Error ? err.message : 'AI request failed'
       setError(message)
+      console.error("AI Chat Error:", err);
       throw err
     } finally {
       setIsLoading(false)
