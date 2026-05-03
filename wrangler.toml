@@ -1,5 +1,5 @@
 name = "mannt-check"
-main = ".open-next/server-functions/default/index.mjs"
+# main = ".open-next/server-functions/default/index.mjs"
 compatibility_date = "2024-04-01"
 compatibility_flags = ["nodejs_compat"]
 
@@ -8,4 +8,4 @@ NEXT_PUBLIC_GOOGLE_MAPS_API_KEY = "AIzaSyCiqm-TqqMhr2f3BDcUtCEmMBAUvrpGkYE"
 
 [build]
 command = "npm run build"
-pages_build_output_dir = ".next"
+pages_build_output_dir = "out"
