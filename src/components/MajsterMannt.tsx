@@ -53,7 +53,8 @@ export function MajsterMannt() {
       if (!response.ok) throw new Error('Problem z połączeniem z Majstrem.');
       
       const data = await response.json();
-      setMessages(prev => [...prev, { role: 'assistant', content: data.content || 'Przepraszam, chwilowy brak zasięgu u Majstra.' }]);
+      const content = data.content || data.message || (data.choices && data.choices[0]?.message?.content) || 'Przepraszam, chwilowy brak zasięgu u Majstra.';
+      setMessages(prev => [...prev, { role: 'assistant', content }]);
     } catch (err) {
       setError('Majster jest teraz zajęty w warsztacie. Spróbuj za chwilę.');
       console.error(err);

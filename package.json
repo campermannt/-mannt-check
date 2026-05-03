@@ -1,6 +1,6 @@
 {
-  "name": "mannt-check",
-  "version": "1.0.0",
+  "name": "mannt-check-v2",
+  "version": "2.2.4",
   "private": true,
   "engines": {
     "node": ">=20.0.0"
