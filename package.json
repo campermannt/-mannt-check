@@ -2,6 +2,12 @@
   "name": "mannt-check",
   "version": "1.0.0",
   "private": true,
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "config": {
+    "legacy-peer-deps": true
+  },
   "scripts": {
     "dev": "NODE_OPTIONS='--max-old-space-size=2048' next dev --port 5173",
     "build": "NODE_ENV=production next build",
