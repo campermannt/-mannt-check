@@ -7,5 +7,5 @@ compatibility_flags = ["nodejs_compat"]
 NEXT_PUBLIC_GOOGLE_MAPS_API_KEY = "AIzaSyCiqm-TqqMhr2f3BDcUtCEmMBAUvrpGkYE"
 
 [build]
-command = ""
-minify = false
+command = "npm run build"
+pages_build_output_dir = ".next"
