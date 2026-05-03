@@ -1,7 +1,14 @@
 import { Resend } from 'resend';
 import { NextRequest, NextResponse } from 'next/server';
 
+// Static export compatibility
+export const dynamic = 'force-static';
+
 const resend = new Resend(process.env.RESEND_API_KEY);
+
+export async function GET() {
+  return NextResponse.json({ status: 'API is ready for POST requests' });
+}
 
 export async function POST(request: NextRequest) {
   try {
