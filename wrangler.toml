@@ -1,4 +1,4 @@
-name = "mannt-check-v2"
+name = "mannt-check-final-v2"
 # main = ".open-next/server-functions/default/index.mjs"
 compatibility_date = "2024-04-01"
 compatibility_flags = ["nodejs_compat"]
