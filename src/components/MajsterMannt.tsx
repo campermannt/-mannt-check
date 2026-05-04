@@ -37,7 +37,7 @@ export function MajsterMannt() {
 
     try {
       // Direct fetch to AI service to bypass SDK loading issues
-      const response = await fetch('https://api.nxcode.ai/v1/chat', {
+      const response = await fetch('https://api.mannt.pl/api/chat', { // Use local proxy to avoid CORS
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -67,7 +67,7 @@ export function MajsterMannt() {
     return (
       <button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 z-50 flex items-center gap-3 px-4 py-3 rounded-2xl bg-red-600 text-white shadow-xl hover:scale-105 transition-transform"
+        className="fixed bottom-6 right-6 z-50 flex items-center gap-3 px-4 py-3 rounded-2xl bg-green-700 text-white shadow-xl hover:scale-105 transition-transform"
       >
         <div className="text-left">
           <div className="text-xs opacity-70 uppercase font-bold">AI Doradca</div>
@@ -80,7 +80,7 @@ export function MajsterMannt() {
   return (
     <div className="fixed bottom-6 right-6 z-50 flex flex-col bg-white shadow-2xl rounded-3xl overflow-hidden border border-gray-100" style={{ width: 'min(400px, 90vw)', height: 'min(500px, 70vh)' }}>
       <div className="bg-green-800 p-4 text-white flex justify-between items-center">
-        <h3 className="font-bold">Majster Mannt v2.2.2</h3>
+        <h3 className="font-bold">Majster Mannt v2.2.5</h3>
         <button onClick={() => setIsOpen(false)} className="p-1 opacity-50 hover:opacity-100">✕</button>
       </div>
 
