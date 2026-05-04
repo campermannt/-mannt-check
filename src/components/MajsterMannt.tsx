@@ -1,52 +1,45 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Script from 'next/script';
-
-declare global {
-  interface Window {
-    Nxcode?: any;
-  }
-}
 
 export function MajsterMannt() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isReady, setIsReady] = useState(false);
 
   useEffect(() => {
-    // Check if SDK is already there
-    if (window.Nxcode) {
-      setIsReady(true);
-    }
+    // Inject script directly into head
+    const script = document.createElement('script');
+    script.src = "https://api.nxcode.ai/sdk/nxcode.js";
+    script.async = true;
+    script.onload = () => {
+      console.log('Majster SDK Loaded');
+    };
+    document.head.appendChild(script);
+
+    return () => {
+      document.head.removeChild(script);
+    };
   }, []);
 
   const handleOpen = () => {
     setIsOpen(true);
-    // When opening, try to initialize if SDK is ready
-    if (window.Nxcode && !document.getElementById('nxcode-chat-widget')) {
-      try {
-        window.Nxcode.init({
-          apiKey: 'nx_592384102', // Your original key
-          container: 'majster-mannt-container',
-          theme: 'light',
-          welcomeMessage: 'Cześć! Jestem Majster Mannt. W czym mogę pomóc w Twoim kamperze?'
-        });
-      } catch (e) {
-        console.error('Majster Init Error:', e);
+    // Give a small delay for DOM to be ready
+    setTimeout(() => {
+      if (window.Nxcode) {
+        try {
+          window.Nxcode.init({
+            apiKey: 'nx_592384102',
+            container: 'majster-mannt-container',
+            theme: 'light'
+          });
+        } catch (e) {
+          console.error('Majster Init Error:', e);
+        }
       }
-    }
+    }, 500);
   };
 
   return (
     <>
-      <Script 
-        src="https://api.nxcode.ai/sdk/nxcode.js"
-        onLoad={() => {
-          console.log('Majster SDK Loaded');
-          setIsReady(true);
-        }}
-      />
-
       {/* Trigger Button */}
       {!isOpen && (
         <button
@@ -64,18 +57,21 @@ export function MajsterMannt() {
       {isOpen && (
         <div className="fixed bottom-6 right-6 z-50 flex flex-col bg-white shadow-2xl rounded-3xl overflow-hidden border border-gray-100" style={{ width: 'min(400px, 90vw)', height: 'min(600px, 80vh)' }}>
           <div className="bg-green-800 p-4 text-white flex justify-between items-center">
-            <h3 className="font-bold">Majster Mannt v2.2.6</h3>
+            <h3 className="font-bold">Majster Mannt v2.2.7</h3>
             <button onClick={() => setIsOpen(false)} className="p-1 opacity-50 hover:opacity-100">✕</button>
           </div>
-          <div id="majster-mannt-container" className="flex-1 min-h-[400px]">
-            {!isReady && (
-              <div className="flex items-center justify-center h-full text-gray-400 text-sm animate-pulse">
-                Ładowanie warsztatu Majstra...
-              </div>
-            )}
+          <div id="majster-mannt-container" className="flex-1 min-h-[400px] bg-gray-50">
+            {/* SDK will inject here */}
           </div>
         </div>
       )}
     </>
   );
+}
+
+// Add Nxcode to window type
+declare global {
+  interface Window {
+    Nxcode?: any;
+  }
 }
