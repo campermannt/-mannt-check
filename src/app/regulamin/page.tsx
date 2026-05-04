@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
-export const dynamic = 'force-dynamic';
+// Static export compatible
 
 export const metadata: Metadata = {
   title: 'Regulamin — Mannt Check',
