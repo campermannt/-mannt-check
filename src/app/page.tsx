@@ -142,7 +142,7 @@ function VehicleSwitcher({
       {/* Header row */}
       <div className="flex items-center justify-between" style={{ padding: '18px 20px 14px' }}>
         <p style={{ fontWeight: 800, fontSize: '.875rem', color: 'var(--text-primary)', letterSpacing: '-.02em' }}>
-          Moje pojazdy (v2.2.3-LIVE-CHECK)
+          Moje pojazdy
         </p>
         <button
           onClick={onAdd}
