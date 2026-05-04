@@ -3,11 +3,10 @@
 import Script from 'next/script';
 
 /**
- * Majster Mannt v2.3.0 - Final Surgical Fix
- * This version uses ONLY the official Nxcode SDK as recommended by the provider.
- * All custom UI wrappers are removed to ensure the widget can initialize correctly.
+ * Majster Mannt v2.3.1 - Fix for client-side exception
+ * Restoring named export to match the import in page.tsx
  */
-export default function MajsterMannt() {
+export function MajsterMannt({ onAction }: { onAction?: (action: string) => void }) {
   return (
     <>
       <Script
@@ -30,10 +29,4 @@ export default function MajsterMannt() {
       />
     </>
   );
-}
-
-declare global {
-  interface Window {
-    Nxcode?: any;
-  }
 }
