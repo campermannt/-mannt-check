@@ -1,127 +1,81 @@
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
+import { useState, useEffect } from 'react';
+import Script from 'next/script';
 
-interface ChatMessage {
-  role: 'user' | 'assistant' | 'system';
-  content: string;
+declare global {
+  interface Window {
+    Nxcode?: any;
+  }
 }
 
-const QUICK_QUESTIONS = [
-  'Jak sprawdzić poziom oleju?',
-  'Co to jest DMC?',
-  'Jak zadbać o uszczelki?',
-  'Jak ładować akumulator?',
-];
-
 export function MajsterMannt() {
-  const [messages, setMessages] = useState<ChatMessage[]>([]);
-  const [input, setInput] = useState('');
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
   const [isOpen, setIsOpen] = useState(false);
-  const messagesEndRef = useRef<HTMLDivElement>(null);
+  const [isReady, setIsReady] = useState(false);
 
   useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  }, [messages]);
+    // Check if SDK is already there
+    if (window.Nxcode) {
+      setIsReady(true);
+    }
+  }, []);
 
-  const sendMessage = async (text: string) => {
-    if (!text.trim() || isLoading) return;
-    
-    const userMessage: ChatMessage = { role: 'user', content: text.trim() };
-    setMessages(prev => [...prev, userMessage]);
-    setInput('');
-    setIsLoading(true);
-    setError(null);
-
-    try {
-      // Direct fetch to AI service to bypass SDK loading issues
-      const response = await fetch('https://api.mannt.pl/api/chat', { // Use local proxy to avoid CORS
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          messages: [
-            { role: 'system', content: 'Jesteś Majster Mannt - ekspert od kamperów. Odpowiadaj krótko i po polsku.' },
-            ...messages,
-            userMessage
-          ],
-          model: 'fast'
-        })
-      });
-
-      if (!response.ok) throw new Error('Problem z połączeniem z Majstrem.');
-      
-      const data = await response.json();
-      const content = data.content || data.message || (data.choices && data.choices[0]?.message?.content) || 'Przepraszam, chwilowy brak zasięgu u Majstra.';
-      setMessages(prev => [...prev, { role: 'assistant', content }]);
-    } catch (err) {
-      setError('Majster jest teraz zajęty w warsztacie. Spróbuj za chwilę.');
-      console.error(err);
-    } finally {
-      setIsLoading(false);
+  const handleOpen = () => {
+    setIsOpen(true);
+    // When opening, try to initialize if SDK is ready
+    if (window.Nxcode && !document.getElementById('nxcode-chat-widget')) {
+      try {
+        window.Nxcode.init({
+          apiKey: 'nx_592384102', // Your original key
+          container: 'majster-mannt-container',
+          theme: 'light',
+          welcomeMessage: 'Cześć! Jestem Majster Mannt. W czym mogę pomóc w Twoim kamperze?'
+        });
+      } catch (e) {
+        console.error('Majster Init Error:', e);
+      }
     }
   };
 
-  if (!isOpen) {
-    return (
-      <button
-        onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 z-50 flex items-center gap-3 px-4 py-3 rounded-2xl bg-green-700 text-white shadow-xl hover:scale-105 transition-transform"
-      >
-        <div className="text-left">
-          <div className="text-xs opacity-70 uppercase font-bold">AI Doradca</div>
-          <div className="font-bold">Majster Mannt</div>
-        </div>
-      </button>
-    );
-  }
-
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex flex-col bg-white shadow-2xl rounded-3xl overflow-hidden border border-gray-100" style={{ width: 'min(400px, 90vw)', height: 'min(500px, 70vh)' }}>
-      <div className="bg-green-800 p-4 text-white flex justify-between items-center">
-        <h3 className="font-bold">Majster Mannt v2.2.5</h3>
-        <button onClick={() => setIsOpen(false)} className="p-1 opacity-50 hover:opacity-100">✕</button>
-      </div>
+    <>
+      <Script 
+        src="https://api.nxcode.ai/sdk/nxcode.js"
+        onLoad={() => {
+          console.log('Majster SDK Loaded');
+          setIsReady(true);
+        }}
+      />
 
-      <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-gray-50">
-        {messages.length === 0 && (
-          <div className="space-y-2">
-            <p className="text-xs text-gray-500 text-center mb-4">W czym mogę pomóc w Twoim kamperze?</p>
-            {QUICK_QUESTIONS.map(q => (
-              <button key={q} onClick={() => sendMessage(q)} className="block w-full text-left p-3 bg-white border border-gray-200 rounded-xl text-sm hover:border-green-500 shadow-sm">
-                {q}
-              </button>
-            ))}
+      {/* Trigger Button */}
+      {!isOpen && (
+        <button
+          onClick={handleOpen}
+          className="fixed bottom-6 right-6 z-50 flex items-center gap-3 px-4 py-3 rounded-2xl bg-green-700 text-white shadow-xl hover:scale-105 transition-transform"
+        >
+          <div className="text-left">
+            <div className="text-xs opacity-70 uppercase font-bold">AI Doradca</div>
+            <div className="font-bold">Majster Mannt</div>
           </div>
-        )}
-
-        {messages.map((msg, i) => (
-          <div key={i} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
-            <div className={`max-w-[85%] p-3 rounded-2xl text-sm ${msg.role === 'user' ? 'bg-green-600 text-white' : 'bg-white border border-gray-200 text-gray-800 shadow-sm'}`}>
-              {msg.content}
-            </div>
-          </div>
-        ))}
-
-        {isLoading && <div className="text-xs text-gray-400 animate-pulse">Majster myśli...</div>}
-        {error && <div className="p-2 bg-red-50 text-red-600 rounded-lg text-xs text-center">{error}</div>}
-        <div ref={messagesEndRef} />
-      </div>
-
-      <form onSubmit={(e) => { e.preventDefault(); sendMessage(input); }} className="p-4 bg-white border-t border-gray-100 flex gap-2">
-        <input
-          type="text"
-          value={input}
-          onChange={e => setInput(e.target.value)}
-          placeholder="Zadaj pytanie..."
-          className="flex-1 p-2 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-green-500"
-          disabled={isLoading}
-        />
-        <button type="submit" disabled={isLoading || !input.trim()} className="bg-green-600 text-white px-3 rounded-lg disabled:opacity-50">
-          ➔
         </button>
-      </form>
-    </div>
+      )}
+
+      {/* Widget Container */}
+      {isOpen && (
+        <div className="fixed bottom-6 right-6 z-50 flex flex-col bg-white shadow-2xl rounded-3xl overflow-hidden border border-gray-100" style={{ width: 'min(400px, 90vw)', height: 'min(600px, 80vh)' }}>
+          <div className="bg-green-800 p-4 text-white flex justify-between items-center">
+            <h3 className="font-bold">Majster Mannt v2.2.6</h3>
+            <button onClick={() => setIsOpen(false)} className="p-1 opacity-50 hover:opacity-100">✕</button>
+          </div>
+          <div id="majster-mannt-container" className="flex-1 min-h-[400px]">
+            {!isReady && (
+              <div className="flex items-center justify-center h-full text-gray-400 text-sm animate-pulse">
+                Ładowanie warsztatu Majstra...
+              </div>
+            )}
+          </div>
+        </div>
+      )}
+    </>
   );
 }
