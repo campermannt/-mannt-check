@@ -67,7 +67,7 @@ export function MajsterMannt() {
     return (
       <button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 z-50 flex items-center gap-3 px-4 py-3 rounded-2xl bg-green-700 text-white shadow-xl hover:scale-105 transition-transform"
+        className="fixed bottom-6 right-6 z-50 flex items-center gap-3 px-4 py-3 rounded-2xl bg-red-600 text-white shadow-xl hover:scale-105 transition-transform"
       >
         <div className="text-left">
           <div className="text-xs opacity-70 uppercase font-bold">AI Doradca</div>
