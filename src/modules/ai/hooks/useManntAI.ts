@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useCallback } from 'react'
+import { Nxcode } from '@nxcode/sdk'
 
 export interface ChatMessage {
   role: 'user' | 'assistant' | 'system'
@@ -30,40 +31,9 @@ export interface StreamChunk {
   done: boolean
 }
 
-const SDK_URL = "https://sdk.nxcode.io/nxcode.js";
-
 export function useAI() {
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
-
-  const getSDK = useCallback(async (): Promise<any> => {
-    if (typeof window === 'undefined') throw new Error('Browser only');
-
-    // 1. Check if already exists
-    if ((window as any).Nxcode) {
-      await (window as any).Nxcode.ready();
-      return (window as any).Nxcode;
-    }
-
-    // 2. Inject script if not present
-    if (!document.querySelector(`script[src="${SDK_URL}"]`)) {
-      const script = document.createElement('script');
-      script.src = SDK_URL;
-      script.async = true;
-      document.head.appendChild(script);
-    }
-
-    // 3. Poll for existence (max 10 seconds)
-    for (let i = 0; i < 100; i++) {
-      if ((window as any).Nxcode) {
-        await (window as any).Nxcode.ready();
-        return (window as any).Nxcode;
-      }
-      await new Promise(r => setTimeout(r, 100));
-    }
-
-    throw new Error('AI SDK failed to load. Please check your internet connection.');
-  }, []);
 
   const chatStream = useCallback(async (
     options: ChatOptions,
@@ -72,8 +42,7 @@ export function useAI() {
     setIsLoading(true)
     setError(null)
     try {
-      const sdk = await getSDK()
-      await sdk.ai.chatStream({ ...options, onChunk })
+      await Nxcode.ai.chatStream({ ...options, onChunk })
     } catch (err) {
       const msg = err instanceof Error ? err.message : 'AI failed'
       setError(msg)
@@ -82,14 +51,13 @@ export function useAI() {
     } finally {
       setIsLoading(false)
     }
-  }, [getSDK])
+  }, [])
 
   const chat = useCallback(async (options: ChatOptions): Promise<ChatResponse> => {
     setIsLoading(true)
     setError(null)
     try {
-      const sdk = await getSDK()
-      return await sdk.ai.chat(options)
+      return await Nxcode.ai.chat(options)
     } catch (err) {
       const msg = err instanceof Error ? err.message : 'AI failed'
       setError(msg)
@@ -97,14 +65,13 @@ export function useAI() {
     } finally {
       setIsLoading(false)
     }
-  }, [getSDK])
+  }, [])
 
   const generate = useCallback(async (options: GenerateOptions): Promise<GenerateResponse> => {
     setIsLoading(true)
     setError(null)
     try {
-      const sdk = await getSDK()
-      return await sdk.ai.generate(options)
+      return await Nxcode.ai.generate(options)
     } catch (err) {
       const msg = err instanceof Error ? err.message : 'AI failed'
       setError(msg)
@@ -112,7 +79,7 @@ export function useAI() {
     } finally {
       setIsLoading(false)
     }
-  }, [getSDK])
+  }, [])
 
   return {
     chat,
