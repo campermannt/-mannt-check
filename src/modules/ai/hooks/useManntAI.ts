@@ -30,7 +30,7 @@ export interface StreamChunk {
   done: boolean
 }
 
-const SDK_URL = "https://sdk.nxcode.ai/nxcode.js";
+const SDK_URL = "https://sdk.nxcode.io/nxcode.js";
 
 export function useAI() {
   const [isLoading, setIsLoading] = useState(false)

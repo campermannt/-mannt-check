@@ -32,7 +32,7 @@ export default function RootLayout({
       <body>
         <Providers>{children}</Providers>
         <Script 
-          src="https://api.nxcode.ai/widget/nxcode.js" 
+          src="https://sdk.nxcode.io/nxcode.js" 
           strategy="lazyOnload"
           data-id="majster-mannt-widget"
           data-key="88597003-8874-4279-8809-775971410116"
