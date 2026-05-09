@@ -28,10 +28,15 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/icon-192.png" />
-
       </head>
       <body>
         <Providers>{children}</Providers>
+        <Script 
+          src="https://api.nxcode.ai/widget/nxcode.js" 
+          strategy="lazyOnload"
+          data-id="majster-mannt-widget"
+          data-key="88597003-8874-4279-8809-775971410116"
+        />
       </body>
     </html>
   )
