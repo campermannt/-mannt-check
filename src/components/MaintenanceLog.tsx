@@ -205,7 +205,7 @@ function ServiceRequestModal({
                     Zgłoszenie do serwisu
                   </h3>
                   <p style={{ fontSize: '.8125rem', color: 'var(--text-muted, #6b7280)', marginTop: 3 }}>
-                    Camper Mannt Kielce · camper@mannt.pl
+                    Camper Mannt · camper@mannt.pl
                   </p>
                 </div>
                 {/* Close button */}

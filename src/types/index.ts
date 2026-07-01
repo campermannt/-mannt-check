@@ -99,7 +99,7 @@ export const ONBOARDING_STEPS: OnboardingStep[] = [
   {
     step: 1,
     title: 'Witaj w rodzinie!',
-    content: 'Cieszymy się, że jesteś z nami. Mannt Check to Twój cyfrowy opiekun kampera, stworzony z pasji w naszym kieleckim serwisie.'
+    content: 'Cieszymy się, że jesteś z nami. Mannt Check to Twój cyfrowy opiekun kampera, stworzony z pasji przez zespół Camper Mannt.'
   },
   {
     step: 2,

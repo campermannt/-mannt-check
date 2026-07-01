@@ -38,7 +38,7 @@ export default function RegulamPage() {
 
             <section>
               <h2 style={{ fontWeight: 800, fontSize: '1.0625rem', color: '#111827', marginBottom: 10 }}>§1. Postanowienia ogólne</h2>
-              <p>Niniejszy Regulamin określa zasady korzystania z aplikacji internetowej <strong>Mannt Check</strong> (dalej: „Aplikacja"), której operatorem jest firma <strong>Mannt Serwis Kielce</strong>.</p>
+              <p>Niniejszy Regulamin określa zasady korzystania z aplikacji internetowej <strong>Mannt Check</strong> (dalej: „Aplikacja"), której operatorem jest firma <strong>Camper Mannt</strong>.</p>
               <p style={{ marginTop: 8 }}>Kontakt: <a href="mailto:camper@mannt.pl" style={{ color: '#1a4522', fontWeight: 600 }}>camper@mannt.pl</a></p>
             </section>
 
@@ -99,7 +99,7 @@ export default function RegulamPage() {
         </div>
 
         <p style={{ color: 'rgba(255,255,255,.22)', fontSize: '.7rem', textAlign: 'center', marginTop: 24 }}>
-          © 2025 Mannt Serwis Kielce
+          © 2025 Camper Mannt
         </p>
       </div>
     </div>

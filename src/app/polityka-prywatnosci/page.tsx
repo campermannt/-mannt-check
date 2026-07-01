@@ -35,7 +35,7 @@ export default function PolitykaPrywatnosci() {
 
             <section>
               <h2 style={{ fontWeight: 800, fontSize: '1.0625rem', color: '#111827', marginBottom: 10 }}>1. Administrator danych</h2>
-              <p>Administratorem danych osobowych jest <strong>Mannt Serwis Kielce</strong>.</p>
+              <p>Administratorem danych osobowych jest <strong>Camper Mannt</strong>.</p>
               <p style={{ marginTop: 8 }}>Kontakt w sprawach prywatności: <a href="mailto:camper@mannt.pl" style={{ color: '#1a4522', fontWeight: 600 }}>camper@mannt.pl</a></p>
             </section>
 

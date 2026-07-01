@@ -268,7 +268,7 @@ function AppFooter({ dark = false }: { dark?: boolean }) {
   return (
     <div className="text-center" style={{ padding: '16px 0 8px' }}>
       <div className="flex items-center justify-center flex-wrap gap-x-4 gap-y-1 text-xs" style={{ color: textColor }}>
-        <span>© 2025 Mannt Serwis Kielce</span>
+        <span>© 2025 Camper Mannt</span>
         <span style={{ opacity: .4 }}>·</span>
         <a href="https://mannt.pl" target="_blank" rel="noopener noreferrer" style={{ color: linkColor, textDecoration: 'none', fontWeight: 600 }}>mannt.pl</a>
         <span style={{ opacity: .4 }}>·</span>
@@ -396,7 +396,7 @@ function LoginScreen({ onLogin, onRegister, accountDeleted, onInstallPWA, canIns
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/logo-header.png" alt="Camper Mannt" style={{ height: 80, width: 'auto', display: 'block', maxWidth: 220, filter: 'brightness(0) invert(1) drop-shadow(0 4px 20px rgba(0,0,0,.45))' }} />
           <p style={{ color: 'rgba(255,255,255,.35)', fontSize: '.7rem', letterSpacing: '.16em', textTransform: 'uppercase', fontWeight: 700 }}>
-            Serwis & Zabudowy Kamperów · Kielce
+            Serwis & Zabudowy Kamperów · Zmiana lokalizacji
           </p>
         </div>
 
@@ -1160,10 +1160,10 @@ export default function Home() {
             <div className="card anim-fade-up-3" style={{ overflow: 'hidden' }}>
               <div style={{ padding: '28px 28px 24px', borderBottom: '1px solid var(--divider)' }}>
                 <h2 style={{ fontWeight: 900, fontSize: '1.1875rem', letterSpacing: '-.04em', lineHeight: 1.2, color: 'var(--text-primary)', marginBottom: 10 }}>
-                  Zaufaj profesjonalistom<br />z Camper Mannt Kielce
+                  Zmiana lokalizacji serwisu
                 </h2>
                 <p className="text-sm leading-relaxed" style={{ color: 'var(--text-muted)', maxWidth: 420 }}>
-                  Serwisujemy i budujemy zabudowy kamperów z pasją od ponad 15 lat. Specjalizujemy się w zabudowach custom, instalacjach i naprawach wszelkich typów kamperów i przyczep kempingowych.
+                  Informujemy, że trwa zmiana lokalizacji naszego serwisu. W związku z tym działalność stacjonarna jest chwilowo zawieszona. O nowym adresie poinformujemy wkrótce.
                 </p>
               </div>
               <div style={{ padding: '20px 20px 4px' }}>
